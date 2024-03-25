@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.board.menus.domain.MenuVo;
 import com.board.user.domain.UserVo;
 import com.board.user.mapper.UserMapper;
 
@@ -91,6 +92,18 @@ public class UserController {
 		mv.setViewName("/users/update");
 		return mv;
 	}
+	
+	@RequestMapping("/Update")
+	public  ModelAndView   update( UserVo userVo  ) {
+		// 수정
+		userMapper.userUpdate( userVo );
+		// 수정후 조회
+		ModelAndView   mv   =  new  ModelAndView();
+		mv.setViewName("redirect:/Users/List");
+		return   mv;
+	}
+
+	
 }
 
 

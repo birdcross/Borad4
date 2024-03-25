@@ -35,28 +35,28 @@
 </head>
 <body>
   <main>
-	<h2>사용자 등록</h2>
-	<form action="/Users/Write" method="POST">
+	<h2>회원수정</h2>
+	<form action="/Users/Update">
 	<table>
 	 <tr>
 	   <td>아이디</td>
-	   <td><input type="text" name="userid" /></td>
+	   <td><input type="text" name="userid" value="${ vo.userid }" /></td>
 	 </tr>
 	 <tr>
 	   <td>비밀번호</td>
-	   <td><input type="password" name="passwd" /></td>
+	   <td><input type="password" name="passwd" value="${ vo.passwd }" /></td>
 	 </tr>
 	 <tr>
 	   <td>이름</td>
-	   <td><input type="text" name="username" /></td>
+	   <td><input type="text" name="username" value="${ vo.username }" /></td>
 	 </tr>
 	 <tr>
 	   <td>이메일</td>
-	   <td><input type="text" name="email" /></td>
+	   <td><input type="text" name="email" value="${ vo.email }" /></td>
 	 </tr>
 	 <tr>
 	   <td>포인트</td>
-	   <td><input type="text" value="1000"  /></td>
+	   <td><input type="text" value= "${ vo.upoint }"   /></td>
 	 </tr>
 	 <tr>
 	   <td>가입일</td>
@@ -77,7 +77,7 @@
   <script>
   	const  goListEl  = document.getElementById('goList');
   	goListEl.addEventListener('click', function(e) {
-  		location.href = '/Menus/List';
+  		location.href = '/Users/List';
   	})
   
   </script>

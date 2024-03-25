@@ -67,6 +67,15 @@
 		
 	</insert>
 	
+	<update  id="userUpdate">
+		UPDATE TUSER
+		SET USERID = #{userid},
+    		PASSWD = #{passwd},
+    		USERNAME = #{username},
+    		EMAIL = #{email}
+		WHERE USERID = #{userid}
+  
+  </update>
 	
 </mapper>
 
