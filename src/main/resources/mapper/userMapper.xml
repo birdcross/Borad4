@@ -72,11 +72,16 @@
 		SET USERID = #{userid},
     		PASSWD = #{passwd},
     		USERNAME = #{username},
-    		EMAIL = #{email}
+    		EMAIL = #{email},
+    		UPOINT = #{upoint}
 		WHERE USERID = #{userid}
   
   </update>
 	
+	<delete id = "deleteUser">
+  		DELETE  FROM  TUSER
+  		WHERE  USERID = #{userid}
+  </delete>
 </mapper>
 
 

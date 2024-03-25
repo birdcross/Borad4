@@ -96,13 +96,20 @@ public class UserController {
 	@RequestMapping("/Update")
 	public  ModelAndView   update( UserVo userVo  ) {
 		// 수정
+		//log.info("userVo : {}", userVo);
 		userMapper.userUpdate( userVo );
 		// 수정후 조회
 		ModelAndView   mv   =  new  ModelAndView();
 		mv.setViewName("redirect:/Users/List");
 		return   mv;
 	}
-
+	@RequestMapping("Delete")
+	public ModelAndView delete(UserVo userVo){
+		userMapper.deleteUser(userVo);
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:/Users/List");
+		return    mv;
+	}
 	
 }
 

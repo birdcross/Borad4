@@ -18,6 +18,9 @@ public interface UserMapper {
 
 	void userUpdate(UserVo userVo);
 
+	void deleteUser(UserVo userVo);
+
+
 
 
 }

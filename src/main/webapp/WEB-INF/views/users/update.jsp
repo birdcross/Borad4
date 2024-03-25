@@ -40,7 +40,7 @@
 	<table>
 	 <tr>
 	   <td>아이디</td>
-	   <td><input type="text" name="userid" value="${ vo.userid }" /></td>
+	   <td><input type="text" name="userid" value="${ vo.userid }" readonly /></td>
 	 </tr>
 	 <tr>
 	   <td>비밀번호</td>
@@ -56,7 +56,7 @@
 	 </tr>
 	 <tr>
 	   <td>포인트</td>
-	   <td><input type="text" value= "${ vo.upoint }"   /></td>
+	   <td><input type="text" name = "upoint" value= "${ vo.upoint }"   /></td>
 	 </tr>
 	 <tr>
 	   <td>가입일</td>
